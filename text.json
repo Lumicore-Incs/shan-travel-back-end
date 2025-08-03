@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "Booking API",
+    "_postman_id": "abc12345-6789-1011-1213-141516171819",
+    "description": "CRUD operations for BookingController in Laravel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "bookings"]
+        }
+      }
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"pickup_location\": \"Colombo\",\n  \"drop_location\": \"Kandy\",\n  \"start_date\": \"2025-08-01\",\n  \"end_date\": \"2025-08-05\",\n  \"number_of_persons\": 2,\n  \"contact\": \"0771234567\",\n  \"notes\": \"No special requests\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "bookings"]
+        }
+      }
+    },
+    {
+      "name": "Get Single Booking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "bookings", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Booking",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"notes\": \"Updated note\",\n  \"number_of_persons\": 4\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "bookings", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Booking",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/bookings/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "bookings", "1"]
+        }
+      }
+    }
+  ]
+}
